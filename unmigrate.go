@@ -6,7 +6,6 @@ in i2p version 0.9.42, which you should only need if you are moving from a
 regular router installation to a portable router installation.
 */
 
-
 import (
 	"flag"
 	"fmt"
