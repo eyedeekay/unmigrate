@@ -8,7 +8,7 @@ regular router installation to a portable router installation.
 
 import (
 	"flag"
-	"fmt"
+	//"fmt"
 	"io/ioutil"
 	"log"
 	"strconv"
@@ -25,7 +25,7 @@ func main() {
 	files := GetDirContents(*dir)
 	unMigrated := CombineDirContents(files)
 	ioutil.WriteFile(*out, []byte(unMigrated), 0644)
-	fmt.Println(unMigrated)
+	//fmt.Println(unMigrated)
 }
 
 func GetDirContents(dirPath string) []string {
@@ -53,16 +53,22 @@ func UnmigrateConfigFile(index int, contents []byte) string {
 	var unMigratedContents string
 	for _, line := range lines {
 		if line != "" {
-			if !strings.HasPrefix(strings.TrimLeft(line, " "), "#") {
+			if strings.HasPrefix(strings.TrimLeft(line, " "), "#") {
+				log.Println("comment found, preserving comment", line)
 				unMigratedContents += "\ntunnel." + strconv.Itoa(index) + "." + line
+			} else if strings.HasPrefix(line, "configFile") {
+				log.Println("non-monolithic config option found, commenting out", line)
+				unMigratedContents += "\n# tunnel." + strconv.Itoa(index) + "." + line
 			} else {
-				unMigratedContents += "\n" + line
+				log.Println("writing config line", line)
+				unMigratedContents += "\ntunnel." + strconv.Itoa(index) + "." + line
 			}
 		} else {
+			log.Println("inserting newline", line)
 			unMigratedContents += "\n" + line
 		}
-
 	}
+	//log.Println(unMigratedContents)
 	return unMigratedContents
 }
 

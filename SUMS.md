@@ -2,6 +2,7 @@ unmigrate 0.0.01
 =========================
 
 These are the checksums for the versions found in the release.
+These are all 100% static builds.
 
 Windows
 -------
