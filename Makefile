@@ -3,7 +3,7 @@ GO_COMPILER_OPTS = -a -tags netgo -ldflags '-w -extldflags "-static"'
 
 USER_GH=eyedeekay
 packagename=unmigrate
-VERSION=0.0.01
+VERSION=0.0.02
 
 win:
 	GOOS=windows go build \

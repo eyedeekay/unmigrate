@@ -1,4 +1,4 @@
-unmigrate 0.0.01
+unmigrate 0.0.02
 =========================
 
 These are the checksums for the versions found in the release.
@@ -7,12 +7,12 @@ These are all 100% static builds.
 Windows
 -------
 
-f7e7819551708b0a78f59e0de6b15f245c63cdaa2893a9d1725644f4abcb756e  unmigrate.exe
-ac11dfff6120bbd67e832bd3dd36ffe4db8f70d7b70a55699fe0737c9d9b98f2  unmigrate32.exe
+023c25dee4cb2af64ebe0f13483e9a18c1d4af963d05d45054a171ba1f43e769  unmigrate.exe
+6160fdbfe189fcd571e166689e71e9146ee2db068757ddd2571d79a697da1d11  unmigrate32.exe
 
 Linux
 -----
 
-4c9075dcde8085f9a00c5d7e5c607921e062874e0eb9db61562c3916f2b76681  unmigrate
-6a1bc2ca64fb5da52ee2233544f757ee0c982218a973840a6a030d2c00512a49  unmigrate32
+12e1ff53994118d2c4f7c3b476c09aaaff7a02188c7dfcd2a384e9d302da6c61  unmigrate
+bca66a806b73b60a912356dcad79d05b6e7cd4b88b1ecf9008faaade1eb12ed2  unmigrate32
 

@@ -29,5 +29,5 @@ this:
 They can also be used together:
 
 ```
-    unmigrate.exe -dirpath=C:\Users\YOUR_USERNAME\AppData\Roaming\I2P\i2ptunnel.config.d-dirpath=C:\Users\YOUR_USERNAME\AppData\Roaming\I2P\i2ptunnel.config.d -outpath=C:\Users\YOUR_USERNAME\Documents\i2ptunnel.config
+    unmigrate.exe -dirpath=C:\Users\YOUR_USERNAME\AppData\Roaming\I2P\i2ptunnel.config.d -outpath=C:\Users\YOUR_USERNAME\Documents\i2ptunnel.config
 ```
